@@ -88,6 +88,10 @@ function songInfo(){
   var Spotify = require("node-spotify-api");
   var spotify = new Spotify(keys.spotify);
   var songName = "";
+  
+    if (songName ==="")  {
+    process.argv[3] = "Sign"; process.argv[4] = "Base";  }
+
   for (var i = 3; i < newBand.length; i++){
       if (i > 3 && i < newBand.length){
           songName = songName + "+" + newBand[i];
@@ -117,6 +121,9 @@ function songInfo(){
   //Attempt to resolve movies with multiple words
   function movieInfo(){
     var movieName = ""
+        if (movieName === "")  {
+      process.argv[3] = "Mr."; process.argv[4] = "Nobody" }
+  
 
 for (var i = 3; i < process.argv.length; i++) {
     if (i > 3 && i < process.argv.length) {
